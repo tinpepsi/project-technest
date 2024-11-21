@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color:#9B86BD;
+    background: linear-gradient(to right, #E2BBE9, #7776B3);
+}
+
+.container{
+    background: #E2BFD9;
+    width: 450px;
+    padding: 1.5rem;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0,0,1,0.9);
+    margin-top: 400px;
+}
+
+form{
+    margin: 0 2rem;
+}
+
+.form-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+input{
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9B86BD;
+    padding-left: 1.5rem;
+    font-size: 15px;
+
+}
+
+.input-group{
+    padding: 1% 0;
+    position: relative;
+    margin-bottom: 10px;
+  
+
+}
+
+.input-group i{
+    position: absolute;
+    color: black;
+}
+
+input:focus{
+    background-color: transparent;
+    outline: transparent;
+    border-bottom:2px solid hsl(327,90%,28%);
+}
+input::placeholder{
+    color: transparent;
+}
+
+label{
+    color: #757575;
+    position: relative;
+    left: 1.2em;
+    top: -1.8em;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+
+input:focus~label,input:not(:placeholder-shown)~label{
+    top:-3em;
+    color:hsl(327,90%,28%);
+    font-size: 15px;
+}
+
+.recover{
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recover a{
+    text-decoration: none;
+    color: #7776B3;
+}
+
+.recover a:hover{
+    color: #674188;
+    text-decoration: underline;
+}
+
+.btn{
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background:#674188;
+    color: white;
+    cursor: pointer;
+    transform: 0.9s;
+}
+
+.btn:hover{
+    background: black;
+}
+
+.or{
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.link {
+    display: flex; /* Use flexbox to create a row layout */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Center vertically */
+    padding: 0 2rem;
+    margin-top: 0.9rem;
+    margin-left: 12px;
+    font-weight: bold;
+    
+}
+
+.account-text {
+    flex: 0 0 75%; /* Allow this element to take 80% of the width */
+    margin: 0; /* Remove default margin */
+}
+
+.link .custom-button {
+    color: #7776B3;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link .custom-button:hover {
+    text-decoration: underline;
+    color: #674188;
+}
+
+
+.invalid-feedback{
+    color: black;
+    font-size: 14px; /* Slightly smaller font size */
+    margin-bottom: 15px;
+}
+
+/* Error message styling */
+.input-group .error {
+    color: red;                     /* Red color to indicate error */
+    font-size: 0.9em;               /* Slightly smaller font size */
+    text-align: left;               /* Align text to the left */
+    margin-top: -20px;  
+}
+
+/* Highlight the input border on invalid entry */
+.input-group input:invalid {
+    border-color: #ff4d4d;         
+}
+
+.error-message {
+    color: white;                        /* White text color for better contrast */
+    background-color: #ff4d4d;          /* Light red background to indicate error */
+    border: 1px solid #ff1a1a;          /* Slightly darker border */
+    border-radius: 5px;                 /* Rounded corners */
+    padding: 10px;                      /* Padding around the text */
+    margin-top: 10px;                   /* Space above the error message */
+    margin-bottom: 10px;
+    text-align: center;                  /* Center the text */
+    font-size: 0.9em;                   /* Slightly smaller font size */
+}
+
+
+
+
+
+
+
+
+

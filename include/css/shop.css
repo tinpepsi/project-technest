@@ -1,0 +1,1862 @@
+/* -----------------------------------------------------------------
+                        SHOP SECTION
+--------------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+
+}
+
+body{
+    width: 100%;
+    display: grid;
+    height: 100%;
+
+}
+
+/* ---------------------
+    NAVBAR
+------------------------*/
+.navbar {
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+    outline: 1px solid #6c48c5;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: #6c48c5;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.login-button {
+    background-color: #6c48c5;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover {
+    background-color: black;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #6e6b6bad;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: black;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #6c48c5;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.fa-cart-shopping {
+    color: #6c48c5;
+    font-size: 20px;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    margin-right: 5px;
+    border-radius: 15px;
+}
+
+.fa-cart-shopping:hover {
+    color: black;
+    cursor: pointer;
+}
+
+/* Hover effect for dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown menu */
+    margin-top: 0; /* Optional: to avoid spacing issues */
+}
+
+.dropdown-menu {
+    display: none; /* Hide the dropdown menu by default */
+}
+
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Button that triggers the dropdown */
+  .dropbtn {
+    background-color: white; /* Green background */
+    color: black;
+    padding: 10px; /* Some padding */
+    font-size: 18px; /* Font size */
+    border: none; /* Remove borders */
+    cursor: pointer; /* Pointer/hand icon */
+  }
+  
+  /* The dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none; /* Hide the dropdown content */
+    position: absolute; /* Position it below the button */
+    background-color: #f9f9f9; /* Light background */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Box shadow */
+    z-index: 1; /* Sit on top */
+    border-radius: 8px;
+    
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black; /* Black text */
+    padding: 12px 16px; /* Some padding */
+    text-decoration: none; /* No underline */
+    display: block; /* Make links appear as blocks */
+  }
+  
+  /* Show the dropdown content when hovering over the dropdown */
+  .dropdown:hover .dropdown-content {
+    display: block; /* Show the dropdown */
+    left: -90px; /* Adjusts dropdown to the left */
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1; /* Light grey background */
+  }
+
+/* ---------------------
+    END NAVBAR
+------------------------*/
+
+/* ---------------------
+    HERO SECTION
+------------------------*/
+
+header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    background: var(--grape-0);
+  }
+
+.hero-section{
+    
+    background-image: url(../pic/black.png);
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+}
+
+
+.hero-section .container{
+    margin-top: 50px;
+    height: 50%;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-section h1{
+    font-size: 1.8em;
+    color: white;
+
+}
+.hero-section h2{
+    font-size: 1.1em;
+    color: white;
+}
+
+.wrapper.custom_wrap {
+    display: flex; /* Maintain flex layout */
+    margin-top: 20px; /* Add spacing above the search bar */
+    justify-content: center; /* Center elements on small screens */
+    align-items: center; /* Align items in the center vertically */
+}
+
+.wrapper.custom_wrap input[type="text"] {
+    border: 2px solid #6C48C5; /* Match the brand color */
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for input */
+    font-size: 16px; /* Increase font size */
+    width: 200px; /* Adjust width for smaller screens */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.wrapper.custom_wrap input[type="text"]:focus {
+    outline: none; /* Remove default outline */
+    border-color: #4A0072; /* Darker shade on focus */
+    box-shadow: 0 0 5px rgba(110, 72, 197, 0.5); /* Soft shadow effect */
+}
+
+.wrapper.custom_wrap button {
+    background-color: #6C48C5; /* Match the brand color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 16px; /* Increase font size */
+    margin-left: 10px; /* Space between input and button */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.wrapper.custom_wrap button:hover {
+    background-color: #4A0072; /* Darker shade on hover */
+}
+
+
+
+
+
+
+/* ---------------------
+    END HERO SECTION
+------------------------*/
+
+/* ---------------------
+    Infinite slideshow
+------------------------*/
+.slider {
+	--totSlides: 7;
+	--slideWidth: 200px;
+	--slideHeight: 150px;
+	--animationSpeed: calc(2s * var(--totSlides));
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+	height: var(--slideHeight);
+    padding-top: 20px;
+    padding-bottom: 20px;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+    margin-top: 20px;
+
+}
+
+.slider .slides-track {
+	animation: scroll var(--animationSpeed) linear infinite;
+	display: flex;
+	width: calc(var(--slideWidth) * var(--totSlides) * 2);
+}
+
+.slider .slide {
+	height: 100px;
+	width: var(--slideWidth);
+	overflow: hidden;
+}
+
+.slider .slide img {
+	height: 100%;
+	width: auto;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(var(--slideWidth) * var(--totSlides) * -1));
+	}
+}
+
+
+/* ---------------------
+    END Infinite slideshow
+------------------------*/
+
+/*=========================================================
+	05 -> HOT DEAL
+===========================================================*/
+
+#hot-deal.section {
+    padding: 60px 0px;
+    margin: 30px 0px;
+    background-color: #E4E7ED;
+    background-image: url(../pic/shop/ads/hotdeal.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .hot-deal {
+    text-align: center;
+  }
+  
+  .hot-deal .hot-deal-countdown {
+    margin-bottom: 30px;
+  }
+  
+  .hot-deal .hot-deal-countdown>li {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background:#6a1b9a;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0px 5px;
+  }
+  
+  .hot-deal .hot-deal-countdown>li>div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .hot-deal .hot-deal-countdown>li>div h3 {
+    color: #FFF;
+    margin-bottom: 0px;
+  }
+  
+  .hot-deal .hot-deal-countdown>li>div span {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #FFF;
+  }
+  
+  .hot-deal p {
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  
+  .hot-deal .cta-btn {
+    margin-top: 15px;
+  }
+  
+  /* Base styles for the button */
+.shop-now-btn {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #6a1b9a; /* Button background color */
+    color: white; /* Button text color */
+    text-align: center; /* Center text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Hover effect */
+.shop-now-btn:hover {
+    background-color: black; /* Darker shade on hover */
+    transform: scale(1.05); /* Scale the button slightly */
+}
+
+/* ---------------------
+    PRODUCT
+------------------------*/
+
+.custom_product_container{
+    background-color: #f3f4f8;
+    margin-top: 20px;
+}
+
+.product-card {
+    width: 350px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 50px auto;
+    background: #fafafa;
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: red;
+    color: #fff;
+    padding: 3px 10px;
+}
+
+.product-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 50px;
+    background: #f0f0f0;
+}
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-details {
+    padding: 30px;
+}
+
+.product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+}
+
+.product-details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.product-details h4 a:hover {
+    color: #6C48C5;
+}
+
+.product-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.product-price {
+    font-size: 15px;
+    color: #6C48C5;
+    font-weight: 600;
+}
+
+.product-price small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.product-links {
+    text-align: right;
+}
+
+/* Apply same styles to both <a> and <button> elements within .product-links */
+.product-links a,
+.product-links button {
+    display: inline-block;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+    background: none;
+    border: none;
+    padding: 0; /* Remove padding for uniformity */
+    cursor: pointer;
+}
+
+/* Hover effect for both <a> and <button> */
+.product-links a:hover,
+.product-links button:hover {
+    color: #6C48C5;
+}
+
+/* Optional: Remove extra spacing if .btn-shop-item or other Bootstrap classes add padding/margin */
+.product-links .btn-shop-item {
+    margin: 0;
+    padding: 0;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.pagination button {
+    background-color: #6C48C5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: black;
+    transform: scale(1.05);
+}
+
+.pagination span {
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.product-title{
+    color: #4a148c;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* ---------------------
+    END PRODUCT
+------------------------*/
+
+/* ---------------------
+    FOOTER
+------------------------*/
+
+.footer-basic {
+    background-color: #2f2f2f; /* Dark background */
+    color: #f8f9fa; /* Light text color */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-basic .social {
+    padding-bottom: 25px;
+}
+
+.footer-basic .social a {
+    color: #f8f9fa;
+    font-size: 24px;
+    margin: 0 15px;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.footer-basic .social a:hover {
+    color: #6f42c1; /* Purple on hover */
+}
+
+.footer-basic ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer-basic ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-basic ul li a {
+    color: #f8f9fa;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-basic ul li a:hover {
+    color: #6f42c1; /* Purple on hover */
+}
+
+.footer-basic .neon-text a {
+    color: #6f42c1; /* Purple text for brand */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-basic .neon-text a:hover {
+    color: #9b59b6; /* Slightly lighter purple on hover */
+}
+
+.footer-basic p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6c757d; /* Subtle text color for copyright */
+}
+
+.footer-basic .ion-ios-heart {
+    color: #e74c3c; /* Red color for heart icon */
+}
+
+
+/* ---------------------
+    END FOOTER
+------------------------*/
+
+/*=========================================================
+	06 -> PRODUCT
+===========================================================*/
+
+/*----------------------------*\
+    product
+\*----------------------------*/
+
+.section {
+    padding: 60px 0;
+}
+
+/* General styles for the product card */
+.product {
+    border: 1px solid #ddd;  /* Light gray border */
+    border-radius: 8px;      /* Rounded corners */
+    overflow: hidden;         /* Clip the overflow */
+    transition: transform 0.2s ease; /* Smooth scaling effect */
+    background-color: #fff;  /* White background */
+    margin: 15px;            /* Margin for gap between products */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+
+}
+
+
+/* Scale up the product card on hover */
+.product:hover {
+    transform: scale(1.05);   /* Slightly enlarge the card */
+}
+
+/* Style for product images */
+.product-img img {
+    width: 100%;              /* Make the image fill the width */
+    height: auto;             /* Maintain aspect ratio */
+}
+
+/* Style for product name and price */
+.product-body {
+    text-align: center;       /* Center text inside product body */
+    padding: 15px;           /* Padding for spacing */
+    text-decoration: none;
+}
+
+.product-name a {
+    text-decoration: none;     /* Remove underline from the link */
+    color: inherit;           /* Use the current text color (inherit from .product-name) */
+}
+
+.product-name {
+    font-size: 1.2em;         /* Slightly larger font size */
+    font-weight: bold;        /* Bold text */
+    margin: 10px 0;          /* Margin for spacing */
+}
+
+
+.product-price {
+    color: #6a1b9a;           /* Purple accent color for price */
+    font-size: 1.1em;         /* Slightly larger font size */
+}
+
+.product-old-price {
+    color: #999;              /* Gray color for old price */
+    text-decoration: line-through; /* Strikethrough effect */
+}
+
+/* Style for buttons */
+.add-to-cart-btn,
+.quick-view {
+    width: calc(100% - 20px);  /* Full width minus the margins */
+    background-color: #6a1b9a;  /* Primary purple color */
+    color: white;               /* White text */
+    border: none;               /* No border */
+    padding: 10px;             /* Padding for buttons */
+    border-radius: 5px;        /* Rounded corners */
+    cursor: pointer;            /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect */
+    margin: 10px;              /* Space on all sides */
+    box-sizing: border-box;     /* Include padding and border in the total width */
+}
+
+/* Hover effect */
+.add-to-cart-btn:hover,
+.quick-view:hover {
+    background-color: #4a148c;  /* Darker shade of purple on hover */
+}
+
+
+
+/* Styles for the product category */
+.product-category {
+    color: #777;              /* Gray color for category */
+    font-size: 0.9em;        /* Smaller font size */
+    margin-bottom: 5px;      /* Margin for spacing */
+}
+
+.product-label {
+    background-color: #6a1b9a; /* Background color for the label */
+    color: white;              /* Text color */
+    font-size: 0.8em;          /* Font size for the label */
+    padding: 5px 10px;        /* Padding for spacing around the text */
+    border-radius: 3px;       /* Rounded corners */
+    margin: 10px 0;           /* Margin for spacing above and below the label */
+    display: inline-block;     /* Make the label fit the content */
+    margin-left: 7px;
+}
+
+.product-rating {
+    color: #ddd; /* Default color for empty stars (gray) */
+}
+
+.product-rating .filled {
+    color: #ffcc00; /* Color for filled stars (yellow) */
+}
+
+/* Style for the carousel control arrows */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px; /* Adjust the width */
+    height: 50px; /* Adjust the height */
+    border-radius: 50%; /* Make the buttons circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 700px; /* You might want to adjust this */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    margin-bottom: 20px;
+}
+
+/* Place the previous arrow on the left */
+.carousel-control-prev {
+    left: 10px; /* Adjust as needed */
+}
+
+/* Place the next arrow on the right */
+.carousel-control-next {
+    right: 10px; /* Adjust as needed */
+}
+
+
+
+.carousel-control-prev-icon {
+    color: black; /* Icon color */
+    font-size: 20px; /* Adjust the icon size */
+}
+
+
+.carousel-control-next-icon {
+    color: black; /* Arrow icon color */
+    font-size: 20px; /* Adjust the icon size */
+}
+
+.top-selling-title {
+    font-weight: bold;  /* Makes the text bold */
+    color: #6a1b9a;      /* Changes the text color to purple */
+}
+
+
+/* --------features add sections-----------*/
+.features-section {
+	padding-bottom: 0;
+    padding-top: 50px;
+}
+
+.features-ads {
+	padding-bottom: 67px;
+    
+}
+
+.features-ads .single-features-ads {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.features-ads .single-features-ads.first {
+	margin-top: 39px;
+}
+
+.features-ads .single-features-ads.second {
+	margin-top: 8px;
+}
+
+.features-ads .single-features-ads img {
+	margin-bottom: 15px;
+}
+
+.features-ads .single-features-ads h4 {
+	color: #1e1e1e;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 50px;
+}
+
+.features-ads .single-features-ads p {
+	color: #727272;
+	font-size: 14px;
+	line-height: 27px;
+	font-weight: 500;
+}
+
+.features-box .single-box-item {
+	position: relative;
+}
+
+.features-box .single-box-item.first-box {
+	margin-bottom: 35px;
+}
+
+.features-box .single-box-item.first-box .box-text {
+	position: absolute;
+	right: 60px;
+	top: 106px;
+}
+
+.features-box .single-box-item.first-box .box-text .trend-alert {
+	color: #1e1e1e;
+	display: block;
+	font-size: 22px;
+	font-family: "FuturaBT-Book";
+	letter-spacing: 2px;
+	line-height: 45px;
+	text-transform: uppercase;
+	margin-bottom: 38px;
+}
+
+.features-box .single-box-item.first-box .box-text .primary-btn {
+	border-color: #D0D7DB;
+	color: #1e1e1e;
+}
+
+.features-box .single-box-item.second-box {
+	margin-bottom: 35px;
+}
+
+.features-box .single-box-item.second-box .box-text {
+	position: absolute;
+	left: 56px;
+	top: 150px;
+}
+
+.features-box .single-box-item.second-box .box-text .trend-year {
+	color: #fff;
+	opacity: 1;
+}
+
+.features-box .single-box-item.second-box .box-text .trend-alert {
+	color: #5b5b5b;
+	display: inline-block;
+	font-size: 16px;
+	font-family: "FuturaBT-Book";
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	line-height: 45px;
+}
+
+.features-box .single-box-item.large-box .box-text {
+	position: absolute;
+	left: 125px;
+	top: 60px;
+}
+
+.features-box .single-box-item.large-box .box-text .trend-year {
+	color: #838383;
+	opacity: 1;
+}
+
+.features-box .single-box-item.large-box .box-text h2 {
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 56px;
+}
+
+.features-box .single-box-item.large-box .box-text .trend-alert {
+	color: #5b5b5b;
+	display: inline-block;
+	font-size: 22px;
+	font-family: "FuturaBT-Book";
+	letter-spacing: 2px;
+	line-height: 36px;
+	text-transform: uppercase;
+}
+
+.features-box .single-box-item img {
+	min-width: 100%;
+}
+
+.features-box .single-box-item .box-text .trend-year {
+	color: #1e1e1e;
+	font-size: 22px;
+	font-weight: 700;
+	opacity: 0.32;
+	display: inline-block;
+}
+
+.features-box .single-box-item .box-text h2 {
+	color: #1e1e1e;
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 38px;
+}
+/* --------end features add sections-----------*/
+
+
+
+
+/* -----------------------------------------------------------------
+                       END SHOP SECTION
+--------------------------------------------------------------------*/
+
+/* -----------------------------------------------------------------
+                       END SMART SECTION
+--------------------------------------------------------------------*/
+
+.custom_smartwatch_container {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.top-smartwatch-area {
+    background-color: #f3f4f8;
+}
+
+.feature-right .lnr, .feature-left .lnr {
+    color: #00aaff;
+    font-size: 30px;
+}
+
+.feature-right h4, .feature-left h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Container for the images, to keep them centered */
+.feature-middle {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 400px;           /* Set a fixed height for the container, adjust as needed */
+    position: relative;
+    overflow: hidden;        /* Hide images that are out of view */
+    width: 100%;             /* Ensure full width */
+}
+
+/* Image styling for fade-in/fade-out */
+.fade-img {
+    position: absolute;      /* Stack images on top of each other */
+    width: 100%;              /* Make the image take up full width of container */
+    height: auto;             /* Ensure the image maintains aspect ratio */
+    opacity: 0;               /* Start with image invisible */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in/out effect */
+    z-index: 0;
+}
+
+/* When the image has the 'active' class, make it visible */
+.fade-img.active {
+    opacity: 1;               /* Show image with "active" class */
+    z-index: 1;               /* Ensure it's on top */
+}
+
+/* Optional: Add border radius and shadow */
+.fade-img {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect on images */
+.fade-img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* STEPS SECTION */
+
+/* Step Section */
+.steps-section {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 60px 0; /* Adds space above and below the section */
+}
+
+/* Intro text container */
+.steps-section .intro-text {
+    margin-bottom: 40px; /* Space between the intro text and images */
+}
+
+.steps-section h1 {
+    font-size: 36px;
+    color: #4b0082; /* Purple color */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.steps-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background-color: #4b0082; /* Purple button */
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #6a0dad; /* Lighter purple on hover */
+}
+
+/* Image container */
+.steps-section .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds space between images */
+    flex-wrap: nowrap; /* Prevent the images from wrapping */
+}
+
+.steps-section .step-img {
+    width: 100%;
+    max-width: 450px; /* Ensures the images don't get too large */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow around images */
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.steps-section .step-img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* On large screens (tablet and above) */
+@media (min-width: 992px) {
+    .steps-section .row {
+        flex-direction: row; /* Ensure the images are in a single row */
+        justify-content: center;
+    }
+
+    .steps-section .col-md-4 {
+        width: 33.33%; /* Each image takes 1/3 of the row width */
+    }
+}
+
+/* On small screens (mobile and below) */
+@media (max-width: 991px) {
+    .steps-section .row {
+        flex-direction: column; /* Stack the images in 3 rows on small screens */
+        align-items: center; /* Center align the images */
+    }
+
+    .steps-section .col-md-4 {
+        width: 100%; /* Images take full width on small screens */
+        margin-bottom: 20px; /* Space between images */
+    }
+}
+
+
+
+  /* -----------------------------------------------------------------
+                       SMART SECTION
+--------------------------------------------------------------------*/
+
+/* -----------------------------------------------------------------
+                        ELECTRIC BIKE SECTION
+--------------------------------------------------------------------*/
+
+/* Base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    height: 100%;
+}
+
+.top-electric-bike-area {
+    position: relative;
+    height: 100vh;
+    background: url('../pic/shop/bike/bg.png') no-repeat center center/cover;
+    display: flex;
+    align-items: flex-end; /* Align content to the bottom */
+    justify-content: flex-end; /* Align content to the right */
+    overflow: hidden;
+    animation: fadeInImage 3s ease-in-out; /* Fade-in animation for background image */
+}
+
+.hero-content {
+    text-align: right; /* Right align the text */
+    padding: 20px;
+    margin-bottom: 50px; /* Space from the bottom */
+    max-width: 600px; /* Limit width for readability */
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.5s forwards 0.5s;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 3px 6px 15px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeInText 2s forwards 1.5s;
+}
+
+/* Animations */
+@keyframes fadeInImage {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Additional effects */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Base styles for the Best Selling section */
+.bike_text {
+    padding: 50px 20px;
+    margin: 20px auto;
+    text-align: center; /* Center the text */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Start from below */
+    transition: opacity 1.5s, transform 1.5s; /* Smooth transition */
+}
+
+.bike_text.visible {
+    opacity: 1; /* Show text */
+    transform: translateY(0); /* Slide text up */
+}
+
+.bike_text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333; /* Dark text color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bike_text p {
+    font-size: 1.2rem;
+    color: #555; /* Slightly lighter text color */
+    line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .bike_text h2 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+    .bike_text p {
+        font-size: 1rem; /* Smaller text on mobile */
+    }
+}
+
+
+
+
+
+/* -----------------------------------------------------------------
+                       END ELECTRIC BIKE SECTION
+--------------------------------------------------------------------*/
+
+/* -----------------------------------------------------------------
+                       DRONE SECTION
+--------------------------------------------------------------------*/
+/* Hero Section Styles */
+.top-drone-camera-area {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;     /* Vertically center */
+    height: 100vh;           /* Full viewport height */
+    background: url('../pic/shop/drone/bg.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Content Container */
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+/* Title Style */
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+/* Paragraph Style */
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Button Style with Purple Theme */
+.cta-button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background-color: #8e44ad;  /* Purple background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid transparent; /* Transparent border initially */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+/* Button Hover Effect with Transparency */
+.cta-button:hover {
+    background-color: transparent;  /* Make background transparent */
+    color: #8e44ad;  /* Change text color to purple */
+    border: 2px solid #8e44ad;  /* Add purple border on hover */
+    transform: scale(1.1); /* Slight scale up on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    text-decoration: none;
+}
+
+/* Button Focus Effect */
+.cta-button:focus {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 0 4px rgba(142, 68, 173, 0.5); /* Add a soft purple outline */
+}
+
+/* PRODUCT CARD */
+/* Text Section Styles */
+.row.text-center.mb-4 {
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0; /* Initially hide the section */
+    transform: translateX(-100%); /* Initially position off-screen to the left */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Increase transition duration to 1s */
+}
+
+/* Animation for when the text becomes visible */
+.row.text-center.mb-4.visible {
+    opacity: 1; /* Make it visible */
+    transform: translateX(0); /* Slide in from the left */
+}
+
+/* Heading Style */
+.row.text-center.mb-4 h2 {
+    font-size: 3rem;               /* Larger font size for emphasis */
+    font-weight: bold;             /* Make it bold */
+    color: #8e44ad;                /* Purple color */
+    letter-spacing: 2px;           /* Spaced out letters */
+    text-transform: uppercase;     /* Uppercase text */
+    margin-bottom: 20px;
+}
+
+/* Subheading Style */
+.row.text-center.mb-4 p {
+    font-size: 1.2rem;             /* Slightly larger font for the subheading */
+    color: #555;                   /* Subtle grey color */
+    line-height: 1.6;              /* Better readability */
+    max-width: 600px;              /* Limit the width */
+    margin: 0 auto;                /* Center the text */
+}
+
+
+/* -----------------------------------------------------------------
+                       END DRONE SECTION
+--------------------------------------------------------------------*/
+
+/* -----------------------------------------------------------------
+                       SMARTPHONE SECTION
+--------------------------------------------------------------------*/
+
+.smartphone_wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /* 100% of the viewport height */
+    background-color: black; /* Set the background color to black */
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Image will scale to fit the container without cropping */
+    opacity: 0;
+    animation: fadeInOut 18s infinite;
+}
+
+.hero-image:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-image:nth-child(2) {
+    animation-delay: 6s; /* 6s after the first image */
+}
+
+.hero-image:nth-child(3) {
+    animation-delay: 12s; /* 12s after the first image */
+}
+
+@keyframes fadeInOut {
+    0%, 16.66%, 100% {
+        opacity: 0;
+    }
+    16.66%, 33.33% {
+        opacity: 1;
+    }
+    50%, 66.66% {
+        opacity: 0;
+    }
+}
+
+ /* Define the slide-in animation with a slower speed */
+ @keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-150%); /* Start further off-screen */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End at the normal position */
+    }
+}
+
+/* Apply this animation to elements with the class 'slide-in' */
+.slide-in {
+    opacity: 0; /* Start hidden */
+    transform: translateX(-150%); /* Initially off-screen further to the left */
+    animation: slideInFromLeft 1.5s ease-out forwards; /* Slower animation with a duration of 1.5 seconds */
+}
+
+/* Optional: Add some delay for smooth sequential animation */
+.slide-in.delay {
+    animation-delay: 0.3s;
+}
+
+/* When the element is visible, apply the animation */
+.slide-in.visible {
+    opacity: 1;
+    transform: translateX(0); /* Ensure it's in position after scrolling */
+}
+
+.best-selling-section {
+    text-align: center;
+    background-color: #f8f9fa; /* Purple background */
+    padding: 50px 20px; /* Add some padding around the text */
+    border-radius: 10px; /* Optional: rounded corners */
+    color: #fff; /* White text color */
+}
+
+/* Text Design for Better Typography */
+.best-selling-section h2 {
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    font-size: 3rem; /* Larger font size */
+    font-weight: bold; /* Make the heading bold */
+    color: #4b0082; /* Dark color for the heading */
+    letter-spacing: 2px; /* Add some spacing between letters */
+    text-transform: uppercase; /* Uppercase for a strong impression */
+    margin-bottom: 20px; /* Space between the heading and the paragraph */
+}
+
+.best-selling-section p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem; /* A smaller font size for the description */
+    color: #555; /* Lighter gray for the paragraph text */
+    line-height: 1.6; /* Increase line height for readability */
+    max-width: 80%; /* Limit the width for better text alignment */
+    margin: 0 auto; /* Center the paragraph */
+    text-align: center; /* Ensure the text is centered */
+    letter-spacing: 1px; /* Slight spacing for better legibility */
+    opacity: 0.8; /* Slight transparency */
+}
+
+/* -----------------------------------------------------------------
+                       END SMARTPHONE SECTION
+--------------------------------------------------------------------*/
+
+/* -----------------------------------------------------------------
+                       GAMING SECTION
+--------------------------------------------------------------------*/
+.gaming-console-hero-section {
+    position: relative;
+    height: 1200px; /* Set the height as needed */
+    overflow: hidden;
+}
+
+.gaming-console-hero-background {
+    position: relative; /* Make the background relative */
+    background-image: url('../pic/shop/gaming/bg.jpg'); /* Replace with your background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+    height: 100%; /* Fill the hero section */
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+.gaming-console-hero-background::before {
+    content: ''; /* Necessary for the pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Ensure it covers the entire area */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjusted to a more opaque overlay for better visibility */
+    z-index: 1; /* Ensure it sits on top of the background image */
+}
+
+.gaming-console-hero-content {
+    position: relative; /* Ensure content is above the overlay */
+    display: flex; /* Flex layout for inner content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+    width: 150%; /* Full width */
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+.gaming-console-hero-text {
+    max-width: 60%; /* Adjusted text width */
+    color: white; /* Text color */
+    padding: 50px;
+}
+
+.gaming-console-hero-button {
+    background-color: #6200ea; /* Purple background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.gaming-console-hero-button:hover {
+    background-color: black; /* Darker shade on hover */
+}
+
+/* ads */
+/* Base styles for the promotions section */
+.promotions-section {
+    background-color: #4b0082; /* Deep purple background */
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .promotion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .promotion-content {
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .promotion-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #ffcc00; /* Yellow accent */
+  }
+  
+  .promotion-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .promotion-button {
+    padding: 15px 35px;
+    background-color: #ffcc00; /* Yellow button */
+    color: #4b0082; /* Purple text on button */
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+  }
+  
+  .promotion-button:hover {
+    background-color: #ff9900; /* Darker yellow on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+  }
+  
+  /* Image styles */
+  .promotion-image img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 15px;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateX(100%); /* Initially off-screen */
+    transition: all 1s ease-out; /* Smooth transition */
+  }
+  
+  /* Countdown Timer */
+  .countdown-timer {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #ffcc00; /* Yellow text */
+  }
+  
+  /* Responsive design for mobile */
+  @media (max-width: 768px) {
+    .promotion-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .promotion-image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  
+    .promotion-content {
+      text-align: center;
+      max-width: 100%;
+    }
+  
+    .promotion-content h2 {
+      font-size: 2.2rem;
+    }
+  
+    .promotion-button {
+      padding: 12px 30px;
+      font-size: 1rem;
+    }
+  
+    .countdown-timer {
+      font-size: 1.2rem;
+    }
+  }
+  
+
+/* -----------------------------------------------------------------
+                       END GAMING SECTION
+--------------------------------------------------------------------*/
+
+/* -----------------------------------------------------------------
+                       TECH ACCESSORIES SECTION
+--------------------------------------------------------------------*/
+/* Tech Accessories Hero Section Styles */
+/* General section styling for the top-tech-accessories section */
+.top-tech-accessories-area {
+    padding: 100px 0;
+    background-color: #f3e8ff; /* Light lavender background */
+  }
+  
+  .top-tech-accessories-area .custom_tech_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .top-tech-accessories-area .title h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #4a006e; /* Dark purple */
+    margin-bottom: 10px;
+  }
+  
+  .top-tech-accessories-area .title p {
+    font-size: 18px;
+    color: #8e44ad; /* Medium purple */
+  }
+  
+  /* Row for features and image */
+  .top-tech-accessories-area .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .top-tech-accessories-area .feature-left,
+  .top-tech-accessories-area .feature-right {
+    padding: 15px;
+  }
+  
+  /* Feature box styling */
+  .top-tech-accessories-area .single-feature {
+    background-color: #CDC1FF;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(74, 0, 110, 0.15); /* Purple shadow */
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px; /* Ensure consistent height for centering */
+  }
+  
+  /* Icon styling */
+  .top-tech-accessories-area .lnr {
+    font-size: 40px;
+    color: #6a0dad; /* Bright purple for icons */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .top-tech-accessories-area .single-feature:hover .lnr {
+    color: #4a006e; /* Dark purple on hover */
+  }
+  
+  /* Center the h4 and p elements absolutely within single-feature */
+  .top-tech-accessories-area .single-feature h4,
+  .top-tech-accessories-area .single-feature p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  
+  .top-tech-accessories-area .single-feature p {
+    opacity: 0;
+    visibility: hidden;
+    color: #563A9C; 
+  }
+  
+  .top-tech-accessories-area .single-feature:hover h4 {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .top-tech-accessories-area .single-feature:hover p {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Center image styling */
+  .top-tech-accessories-area .feature-middle {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .top-tech-accessories-area .feature-middle img {
+    max-width: 100%;
+    height: auto;
+    
+    
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 991px) {
+    .top-tech-accessories-area .row {
+      flex-direction: column;
+    }
+  
+    .top-tech-accessories-area .feature-left,
+    .top-tech-accessories-area .feature-right {
+      padding: 30px 0;
+    }
+  
+    .top-tech-accessories-area .feature-middle {
+      margin-top: 30px;
+    }
+  
+    .top-tech-accessories-area .title h1 {
+      font-size: 30px;
+    }
+  
+    .top-tech-accessories-area .title p {
+      font-size: 16px;
+    }
+  
+    .top-tech-accessories-area .single-feature {
+      margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .top-tech-accessories-area .title h1 {
+      font-size: 28px;
+    }
+  
+    .top-tech-accessories-area .title p {
+      font-size: 14px;
+    }
+  
+    .top-tech-accessories-area .lnr {
+      font-size: 35px;
+    }
+  }
+
+  
+  
+
+
+/* -------- TECH HOT DEAL ------- */
+#tech-hot-deal.section {
+    padding: 60px 0px;
+    margin: 30px 0px;
+    background-image: url(../pic/shop/tech/promo.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hot-deal {
+    text-align: center;
+    padding: 100px;
+    color: black;
+}
+/* -------- END TECH HOT DEAL ------- */
+
+/* -------- tech features add sections -------- */
+.tech-features-section {
+	padding-bottom: 0;
+    padding-top: 50px;
+}
+
+.tech-features-box .single-box-item {
+	position: relative;
+	margin-bottom: 35px;
+}
+
+.tech-features-box .single-box-item img {
+	min-width: 100%;
+}
+/* -------- end tech features add sections -------- */
+
+
+
+
+/* -----------------------------------------------------------------
+                       END TECH ACCESSORIES SECTION
+--------------------------------------------------------------------*/
+
+.product-card-section {
+    background-color: #f8f9fa; /* Light background for contrast */
+    text-align: center;
+}
+
+.product-card-section .card {
+    border-radius: 15px; /* Rounded corners for the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.product-card-section .card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.product-card-section .card-img-top {
+    border-radius: 15px 15px 0 0; /* Rounded corners for the image */
+}
+
+.product-card-section .card-title {
+    color: #6f42c1; /* Purple color for card title */
+}
+
+.product-card-section .card-text {
+    font-size: 1.5rem; /* Larger font size for the price */
+    color: #6f42c1; /* Purple color for the price */
+}
+
+.product-card-section .btn-primary {
+    background-color: #6f42c1; /* Purple background for button */
+    border-color: #6f42c1; /* Purple border for button */
+    border-radius: 10px; /* Rounded corners for the button */
+}
+
+.product-card-section .btn-primary:hover {
+    background-color: #563d7c; /* Darker purple on hover */
+    border-color: #563d7c; /* Darker purple border on hover */
+}
+
+
+
